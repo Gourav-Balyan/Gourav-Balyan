@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200" width="100%" height="200">
+  <defs>
+    <radialGradient id="radar" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#D4AF37" stop-opacity="0.2" />
+      <stop offset="100%" stop-color="#030303" stop-opacity="1" />
+    </radialGradient>
+    <linearGradient id="scanline" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#121212" stop-opacity="0" />
+      <stop offset="50%" stop-color="#D4AF37" stop-opacity="0.1" />
+      <stop offset="100%" stop-color="#121212" stop-opacity="0" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background Void -->
+  <rect width="100%" height="100%" fill="#030303" />
+
+  <!-- Radar Grid -->
+  <circle cx="400" cy="100" r="80" fill="url(#radar)" stroke="#1A1A1A" stroke-width="1" />
+  <circle cx="400" cy="100" r="140" fill="none" stroke="#1A1A1A" stroke-width="1" stroke-dasharray="4 4" />
+  <circle cx="400" cy="100" r="220" fill="none" stroke="#1A1A1A" stroke-width="0.5" />
+  
+  <!-- Axis Lines -->
+  <line x1="100" y1="100" x2="700" y2="100" stroke="#1A1A1A" stroke-width="1" />
+  <line x1="400" y1="0" x2="400" y2="200" stroke="#1A1A1A" stroke-width="1" />
+
+  <!-- The Planets / Nodes -->
+  <!-- The Core -->
+  <circle cx="400" cy="100" r="4" fill="#D4AF37" />
+  <!-- Orbit 1 Node -->
+  <circle cx="456" cy="43" r="3" fill="#E5E5E5" />
+  <line x1="400" y1="100" x2="456" y2="43" stroke="#D4AF37" stroke-width="0.5" stroke-dasharray="2 2" />
+  <!-- Orbit 2 Node -->
+  <circle cx="280" cy="170" r="3" fill="#888888" />
+  <line x1="400" y1="100" x2="280" y2="170" stroke="#D4AF37" stroke-width="0.5" stroke-dasharray="2 2" />
+  
+  <!-- Data Readouts -->
+  <text x="20" y="30" font-family="monospace" font-size="10" fill="#888888">SYS_STATUS: ONLINE</text>
+  <text x="20" y="45" font-family="monospace" font-size="10" fill="#888888">ORBITAL_PHASE: ACTIVE</text>
+  <text x="20" y="60" font-family="monospace" font-size="10" fill="#D4AF37">AUTHORIZATION: GOURAV_BALYAN</text>
+
+  <text x="640" y="160" font-family="monospace" font-size="10" fill="#888888">NODE_01: IIT_PATNA</text>
+  <text x="640" y="175" font-family="monospace" font-size="10" fill="#888888">NODE_02: CYBERSEC_LAB</text>
+
+  <!-- Animated Scanline Simulation (Static in SVG but adds texture) -->
+  <rect width="100%" height="100%" fill="url(#scanline)" />
+</svg>
