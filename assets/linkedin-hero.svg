@@ -1,34 +1,28 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 250" width="800" height="250">
   <defs>
     <style>
-      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&amp;display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&amp;display=swap');
       
-      .bg { fill: #0d1117; }
-      .text-title { font-family: 'Inter', sans-serif; font-weight: 800; font-size: 32px; fill: #c9d1d9; }
-      .text-subtitle { font-family: 'Inter', sans-serif; font-weight: 600; font-size: 16px; fill: #8b949e; }
-      .text-body { font-family: 'Inter', sans-serif; font-weight: 400; font-size: 14px; fill: #8b949e; }
+      .bg { fill: #0a0c10; }
+      .text-title { font-family: 'Inter', sans-serif; font-weight: 800; font-size: 34px; fill: #ffffff; letter-spacing: -0.5px; }
+      .text-subtitle { font-family: 'Inter', sans-serif; font-weight: 600; font-size: 14px; fill: #8b949e; letter-spacing: 2px; text-transform: uppercase; }
+      .text-body { font-family: 'Inter', sans-serif; font-weight: 400; font-size: 14px; fill: #8b949e; line-height: 1.6; }
+      .text-highlight { font-family: 'Inter', sans-serif; font-weight: 500; font-size: 14px; fill: #c9d1d9; }
       .accent { fill: #58a6ff; }
       
       .glow-box {
-        fill: none;
-        stroke: #58a6ff;
-        stroke-width: 2;
-        rx: 8;
-        ry: 8;
-        animation: breathe 4s ease-in-out infinite;
-        transition: all 0.3s ease;
+        fill: rgba(255,255,255,0.01);
+        stroke: rgba(88,166,255,0.2);
+        stroke-width: 1;
+        rx: 12;
+        ry: 12;
+        transition: all 0.4s ease;
       }
       
       .svg-container:hover .glow-box {
-        stroke: #79c0ff;
-        stroke-width: 3;
-        filter: drop-shadow(0 0 12px rgba(88,166,255,0.9));
-      }
-      
-      @keyframes breathe {
-        0% { stroke-opacity: 0.3; stroke-width: 2; filter: drop-shadow(0 0 4px rgba(88,166,255,0.4)); }
-        50% { stroke-opacity: 1; stroke-width: 3; filter: drop-shadow(0 0 10px rgba(88,166,255,0.8)); }
-        100% { stroke-opacity: 0.3; stroke-width: 2; filter: drop-shadow(0 0 4px rgba(88,166,255,0.4)); }
+        stroke: rgba(88,166,255,0.6);
+        fill: rgba(88,166,255,0.02);
+        filter: drop-shadow(0 0 20px rgba(88,166,255,0.15));
       }
       
       .typing {
@@ -41,7 +35,7 @@
       
       @keyframes typing {
         from { width: 0 }
-        to { width: 320px }
+        to { width: 330px }
       }
       @keyframes blink-caret {
         from, to { border-color: transparent }
@@ -51,66 +45,69 @@
       .particle {
         fill: #58a6ff;
         opacity: 0.5;
-        animation: float 6s linear infinite;
+        animation: float 8s linear infinite;
       }
       @keyframes float {
         0% { transform: translateY(0) translateX(0); opacity: 0; }
-        25% { opacity: 0.6; }
-        50% { transform: translateY(-20px) translateX(10px); }
-        75% { opacity: 0.6; }
-        100% { transform: translateY(-40px) translateX(-10px); opacity: 0; }
+        20% { opacity: 0.4; }
+        50% { transform: translateY(-30px) translateX(15px); }
+        80% { opacity: 0.4; }
+        100% { transform: translateY(-60px) translateX(-15px); opacity: 0; }
       }
       
       .interactive-group {
-        transition: transform 0.3s ease;
+        transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
       }
       .svg-container:hover .interactive-group {
-        transform: scale(1.02);
+        transform: scale(1.05) rotate(2deg);
       }
     </style>
     <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#0d1117" />
-      <stop offset="100%" stop-color="#161b22" />
+      <stop offset="0%" stop-color="#0a0c10" />
+      <stop offset="100%" stop-color="#11151d" />
     </linearGradient>
   </defs>
 
   <g class="svg-container">
-    <rect width="100%" height="100%" fill="url(#grad)" rx="12" ry="12"/>
-    <rect x="2" y="2" width="796" height="246" class="glow-box" />
+    <rect width="100%" height="100%" fill="url(#grad)" rx="16" ry="16"/>
+    <rect x="1" y="1" width="798" height="248" class="glow-box" />
     
-    <!-- Particles -->
-    <circle cx="700" cy="180" r="2" class="particle" style="animation-delay: 0s;" />
-    <circle cx="650" cy="200" r="1.5" class="particle" style="animation-delay: 1.5s;" />
-    <circle cx="750" cy="150" r="2.5" class="particle" style="animation-delay: 3s;" />
-    <circle cx="680" cy="100" r="2" class="particle" style="animation-delay: 4.5s;" />
-    <circle cx="720" cy="220" r="1.5" class="particle" style="animation-delay: 2s;" />
+    <!-- Ambient Background Particles -->
+    <circle cx="680" cy="180" r="1.5" class="particle" style="animation-delay: 0s;" />
+    <circle cx="630" cy="200" r="1" class="particle" style="animation-delay: 1.5s;" />
+    <circle cx="730" cy="150" r="2" class="particle" style="animation-delay: 3s;" />
+    <circle cx="660" cy="100" r="1.5" class="particle" style="animation-delay: 4.5s;" />
+    <circle cx="700" cy="220" r="1" class="particle" style="animation-delay: 2s;" />
 
-    <!-- Content -->
-    <text x="40" y="60" class="text-subtitle accent">HI, I'M</text>
-    <text x="40" y="105" class="text-title">Gourav Balyan</text>
+    <!-- Core Details -->
+    <text x="45" y="60" class="text-subtitle accent">EXECUTIVE PROFILE</text>
+    <text x="45" y="105" class="text-title">Gourav Balyan</text>
     
-    <!-- Animated Typing Text -->
-    <g transform="translate(40, 130)">
-      <!-- Fake clipping mask for typing effect -->
-      <text x="0" y="0" class="typing" style="animation: none; border: none;">Building AI-Powered Business Solutions</text>
-      <rect x="0" y="-18" height="24" width="320" fill="#0d1117" style="animation: typing 4s steps(40, end) infinite alternate-reverse; transform-origin: left;"/>
+    <!-- Animated Typing Role -->
+    <g transform="translate(45, 132)">
+      <text x="0" y="0" class="typing" style="animation: none; border: none;">Architecting Enterprise AI Systems</text>
+      <rect x="0" y="-18" height="24" width="340" fill="#0a0c10" style="animation: typing 4s steps(40, end) infinite alternate-reverse; transform-origin: left;"/>
     </g>
 
-    <text x="40" y="175" class="text-body">Exploring AI Automation, Business Systems &amp; AI-First Products.</text>
-    <text x="40" y="195" class="text-body">IIT Patna | Architecting Data Pipelines &amp; Workflows.</text>
+    <text x="45" y="175" class="text-body">Transforming complex business logic into high-throughput, <tspan class="text-highlight">AI-driven infrastructure</tspan>.</text>
+    <text x="45" y="198" class="text-body">IIT Patna | Building scalable Data Pipelines, RevOps Engines, and AI Workflows.</text>
     
-    <!-- Decorative Graphic -->
-    <g transform="translate(600, 80)" class="interactive-group">
-      <circle cx="60" cy="50" r="40" fill="none" stroke="#238636" stroke-width="2" stroke-dasharray="4 4">
-        <animateTransform attributeName="transform" type="rotate" from="0 60 50" to="360 60 50" dur="20s" repeatCount="indefinite" />
+    <!-- Futuristic Radar Graphic -->
+    <g transform="translate(620, 80)" class="interactive-group">
+      <circle cx="60" cy="50" r="45" fill="none" stroke="#238636" stroke-width="1.5" stroke-dasharray="4 6" opacity="0.6">
+        <animateTransform attributeName="transform" type="rotate" from="0 60 50" to="360 60 50" dur="30s" repeatCount="indefinite" />
       </circle>
-      <circle cx="60" cy="50" r="25" fill="none" stroke="#58a6ff" stroke-width="2" stroke-dasharray="8 4">
-        <animateTransform attributeName="transform" type="rotate" from="360 60 50" to="0 60 50" dur="15s" repeatCount="indefinite" />
+      <circle cx="60" cy="50" r="30" fill="none" stroke="#58a6ff" stroke-width="1.5" stroke-dasharray="10 5" opacity="0.8">
+        <animateTransform attributeName="transform" type="rotate" from="360 60 50" to="0 60 50" dur="20s" repeatCount="indefinite" />
       </circle>
-      <circle cx="60" cy="50" r="10" fill="#58a6ff" opacity="0.8">
-        <animate attributeName="opacity" values="0.4;1;0.4" dur="3s" repeatCount="indefinite" />
+      <circle cx="60" cy="50" r="12" fill="#58a6ff" opacity="0.9">
+        <animate attributeName="opacity" values="0.5;1;0.5" dur="4s" repeatCount="indefinite" />
       </circle>
-      <path d="M 60 10 L 60 30 M 60 70 L 60 90 M 20 50 L 40 50 M 80 50 L 100 50" stroke="#8b949e" stroke-width="2" opacity="0.5"/>
+      <circle cx="60" cy="50" r="4" fill="#0a0c10" />
+      <!-- Radar Sweep -->
+      <path d="M 60 50 L 60 5 A 45 45 0 0 1 105 50 Z" fill="rgba(88,166,255,0.1)">
+        <animateTransform attributeName="transform" type="rotate" from="0 60 50" to="360 60 50" dur="4s" repeatCount="indefinite" />
+      </path>
     </g>
   </g>
 </svg>
