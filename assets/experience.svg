@@ -72,7 +72,7 @@
     
     <text x="90" y="35" class="role">Lead AI Orchestrator &amp; Product Architect</text>
     <text x="90" y="55" class="company">Hackknow (Startup) <tspan fill="#8b949e" font-weight="400">• Core Early Member</tspan></text>
-    <text x="500" y="35" class="date" text-anchor="end">Mid March 2026 – Early May 2026</text>
+    <text x="750" y="35" class="date" text-anchor="end">Mid March 2026 – Early May 2026</text>
     
     <text x="90" y="80" class="desc"><tspan class="bullet">• </tspan>Spearheaded the architectural design of the core AI orchestration engine from scratch.</text>
     <text x="90" y="100" class="desc"><tspan class="bullet">• </tspan>Engineered autonomous enterprise workflows, scaling internal operations rapidly.</text>
@@ -86,7 +86,7 @@
     
     <text x="90" y="35" class="role">Data Product Architect</text>
     <text x="90" y="55" class="company">Independent Build Series <tspan fill="#8b949e" font-weight="400">• High-Volume Systems</tspan></text>
-    <text x="500" y="35" class="date" text-anchor="end">Mar 2026 – Apr 2026</text>
+    <text x="750" y="35" class="date" text-anchor="end">Mar 2026 – Apr 2026</text>
     
     <text x="90" y="80" class="desc"><tspan class="bullet">• </tspan>Engineered <tspan fill="#c9d1d9" font-weight="600">Corporate_Payroll_Burn_Engine</tspan>: High-volume financial risk intelligence.</text>
     <text x="90" y="100" class="desc"><tspan class="bullet">• </tspan>Architected <tspan fill="#c9d1d9" font-weight="600">Enterprise_RevOps_Terminal</tspan>: Zero-latency cohort comparison engine.</text>
@@ -103,10 +103,10 @@
     
     <text x="90" y="35" class="role">Indian Institute of Technology (IIT) Patna</text>
     <text x="90" y="55" class="desc">Hybrid BS in <tspan fill="#c9d1d9" font-weight="600">AI &amp; Cybersecurity</tspan></text>
-    <text x="500" y="35" class="date" text-anchor="end">Jul 2026 – Jul 2030 (Expected)</text>
+    <text x="750" y="35" class="date" text-anchor="end">Jul 2026 – Jul 2030 (Expected)</text>
     
-    <rect x="520" y="22" width="60" height="18" class="tag" />
-    <text x="550" y="35" text-anchor="middle" class="tag-text">CURRENT</text>
+    <rect x="420" y="22" width="65" height="18" class="tag" />
+    <text x="452.5" y="35" text-anchor="middle" class="tag-text">CURRENT</text>
   </g>
   
   <g transform="translate(0, 475)" class="node-group">
