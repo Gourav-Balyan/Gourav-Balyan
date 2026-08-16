@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 680" width="800" height="680">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 750" width="800" height="750">
   <defs>
     <style>
       @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap');
@@ -119,8 +119,8 @@
     <text x="80" y="115" class="company">Hybrid course BS in AI &amp; Cybersecurity</text>
     <text x="80" y="135" class="date">July 2026 – July 2030 (Expected)</text>
     
-    <rect x="250" y="123" width="50" height="14" class="tag" />
-    <text x="255" y="134" class="tag-text">Current</text>
+    <rect x="290" y="123" width="50" height="14" class="tag" />
+    <text x="295" y="134" class="tag-text">Current</text>
   </g>
   
   <!-- School -->
@@ -133,9 +133,9 @@
   </g>
 
   <!-- Skills Section -->
-  <text x="40" y="610" class="title">Core Skills</text>
+  <text x="40" y="650" class="title">Core Skills</text>
   
-  <g transform="translate(40, 630)">
+  <g transform="translate(40, 670)">
     <g class="skill-group">
       <rect x="0" y="0" width="160" height="24" class="skill-pill" />
       <text x="80" y="16" text-anchor="middle" class="skill-text">AI Code Orchestration</text>
