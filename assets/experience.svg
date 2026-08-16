@@ -1,15 +1,17 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 680" width="800" height="680">
   <defs>
     <style>
       @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap');
       .bg { fill: #0d1117; }
       .title { font-family: 'Inter', sans-serif; font-weight: 700; font-size: 20px; fill: #c9d1d9; }
-      .role { font-family: 'Inter', sans-serif; font-weight: 600; font-size: 16px; fill: #58a6ff; }
+      .role { font-family: 'Inter', sans-serif; font-weight: 600; font-size: 16px; fill: #58a6ff; transition: fill 0.3s ease; }
       .company { font-family: 'Inter', sans-serif; font-weight: 500; font-size: 14px; fill: #8b949e; }
       .date { font-family: 'Inter', sans-serif; font-weight: 400; font-size: 12px; fill: #8b949e; }
       .desc { font-family: 'Inter', sans-serif; font-weight: 400; font-size: 13px; fill: #c9d1d9; }
-      .skill-pill { fill: #21262d; stroke: #30363d; stroke-width: 1; rx: 12; }
-      .skill-text { font-family: 'Inter', sans-serif; font-weight: 500; font-size: 11px; fill: #8b949e; }
+      .skill-pill { fill: #21262d; stroke: #30363d; stroke-width: 1; rx: 12; transition: all 0.3s ease; }
+      .skill-text { font-family: 'Inter', sans-serif; font-weight: 500; font-size: 11px; fill: #8b949e; transition: fill 0.3s ease; }
+      .tag { fill: #238636; rx: 4; }
+      .tag-text { font-family: 'Inter', sans-serif; font-weight: 600; font-size: 10px; fill: #ffffff; }
       
       .line {
         stroke: #30363d;
@@ -18,9 +20,9 @@
       .line-glow {
         stroke: #58a6ff;
         stroke-width: 2;
-        stroke-dasharray: 400;
-        stroke-dashoffset: 400;
-        animation: drawLine 4s ease-in-out infinite alternate;
+        stroke-dasharray: 600;
+        stroke-dashoffset: 600;
+        animation: drawLine 6s ease-in-out infinite alternate;
       }
       @keyframes drawLine {
         to { stroke-dashoffset: 0; }
@@ -30,6 +32,7 @@
         fill: #0d1117;
         stroke: #58a6ff;
         stroke-width: 3;
+        transition: r 0.3s ease;
       }
       .dot-glow {
         fill: #58a6ff;
@@ -40,6 +43,28 @@
         0% { r: 6; opacity: 0.8; }
         100% { r: 14; opacity: 0; }
       }
+      
+      .node-group {
+        cursor: pointer;
+      }
+      .node-group:hover .role {
+        fill: #79c0ff;
+      }
+      .node-group:hover .dot {
+        r: 8;
+        fill: #58a6ff;
+      }
+      
+      .skill-group {
+        cursor: pointer;
+      }
+      .skill-group:hover .skill-pill {
+        stroke: #58a6ff;
+        fill: #161b22;
+      }
+      .skill-group:hover .skill-text {
+        fill: #58a6ff;
+      }
     </style>
   </defs>
 
@@ -47,25 +72,25 @@
   
   <text x="40" y="40" class="title">Experience &amp; Projects</text>
   
-  <!-- Timeline Line -->
-  <line x1="50" y1="80" x2="50" y2="300" class="line" />
-  <line x1="50" y1="80" x2="50" y2="300" class="line-glow" />
+  <!-- Timeline Line for Experience -->
+  <line x1="50" y1="80" x2="50" y2="340" class="line" />
+  <line x1="50" y1="80" x2="50" y2="340" class="line-glow" />
 
   <!-- Hackknow Node -->
-  <g transform="translate(0, 0)">
+  <g transform="translate(0, 0)" class="node-group">
     <circle cx="50" cy="90" r="6" class="dot-glow" />
     <circle cx="50" cy="90" r="6" class="dot" />
     
     <text x="80" y="95" class="role">AI Orchestrator Lead &amp; Lead Product Architect</text>
     <text x="80" y="115" class="company">Hackknow (Startup) • Early Member</text>
-    <text x="80" y="135" class="date">17 March 2026 – 10 May 2026</text>
+    <text x="80" y="135" class="date">Mid March 2026 – Early May 2026</text>
     
     <text x="80" y="160" class="desc">Helped build AI-powered workflows and several internal tools from scratch.</text>
-    <text x="80" y="180" class="desc">Architected the core AI Orchestrator product logic.</text>
+    <text x="80" y="180" class="desc">Architectured the Core AI Orchestrator &amp; Product.</text>
   </g>
 
   <!-- Freelance Project Node -->
-  <g transform="translate(0, 140)">
+  <g transform="translate(0, 140)" class="node-group">
     <circle cx="50" cy="90" r="6" class="dot-glow" style="animation-delay: 1s;" />
     <circle cx="50" cy="90" r="6" class="dot" />
     
@@ -74,24 +99,61 @@
     <text x="80" y="135" class="date">Mar 2026 – Apr 2026</text>
     
     <text x="80" y="160" class="desc">Architected a High Volume Financial Risk Engine data pipeline.</text>
-    <text x="80" y="180" class="desc">Directed AI to write complex Python processing logic. Achieved execution speeds</text>
-    <text x="80" y="200" class="desc">of mere seconds for 4.8 million rows of market data.</text>
+    <text x="80" y="180" class="desc">Built the Corporate_Payroll_Burn_Engine and Enterprise_RevOps_Terminal architectures.</text>
+    <text x="80" y="200" class="desc">Directed AI to write complex Python processing logic, achieving execution</text>
+    <text x="80" y="220" class="desc">speeds of mere seconds for 4.8 million rows of market data.</text>
+  </g>
+
+  <!-- Education Section -->
+  <text x="40" y="420" class="title">Education</text>
+  
+  <line x1="50" y1="460" x2="50" y2="560" class="line" />
+  <line x1="50" y1="460" x2="50" y2="560" class="line-glow" style="animation-delay: 0.5s;" />
+
+  <!-- IIT Patna -->
+  <g transform="translate(0, 380)" class="node-group">
+    <circle cx="50" cy="90" r="6" class="dot-glow" style="animation-delay: 1.5s; stroke: #238636;" />
+    <circle cx="50" cy="90" r="6" class="dot" />
+    
+    <text x="80" y="95" class="role">IIT Patna</text>
+    <text x="80" y="115" class="company">Hybrid course BS in AI &amp; Cybersecurity</text>
+    <text x="80" y="135" class="date">July 2026 – July 2030 (Expected)</text>
+    
+    <rect x="250" y="123" width="50" height="14" class="tag" />
+    <text x="255" y="134" class="tag-text">Current</text>
+  </g>
+  
+  <!-- School -->
+  <g transform="translate(0, 460)" class="node-group">
+    <circle cx="50" cy="90" r="6" class="dot" />
+    
+    <text x="80" y="95" class="role">I.T.B.P. Public School</text>
+    <text x="80" y="115" class="company">10th &amp; 12th Class Schooling</text>
+    <text x="80" y="135" class="date">Sec:16-B, Dwarka, Delhi</text>
   </g>
 
   <!-- Skills Section -->
-  <text x="40" y="380" class="title">Core Skills</text>
+  <text x="40" y="610" class="title">Core Skills</text>
   
-  <g transform="translate(40, 400)">
-    <rect x="0" y="0" width="160" height="24" class="skill-pill" />
-    <text x="80" y="16" text-anchor="middle" class="skill-text">AI Code Orchestration</text>
+  <g transform="translate(40, 630)">
+    <g class="skill-group">
+      <rect x="0" y="0" width="160" height="24" class="skill-pill" />
+      <text x="80" y="16" text-anchor="middle" class="skill-text">AI Code Orchestration</text>
+    </g>
     
-    <rect x="170" y="0" width="150" height="24" class="skill-pill" />
-    <text x="245" y="16" text-anchor="middle" class="skill-text">Business Logic Design</text>
+    <g class="skill-group" transform="translate(170, 0)">
+      <rect x="0" y="0" width="150" height="24" class="skill-pill" />
+      <text x="75" y="16" text-anchor="middle" class="skill-text">Business Logic Design</text>
+    </g>
     
-    <rect x="330" y="0" width="140" height="24" class="skill-pill" />
-    <text x="400" y="16" text-anchor="middle" class="skill-text">AI Tools &amp; Automation</text>
+    <g class="skill-group" transform="translate(330, 0)">
+      <rect x="0" y="0" width="150" height="24" class="skill-pill" />
+      <text x="75" y="16" text-anchor="middle" class="skill-text">AI Tools &amp; Automation</text>
+    </g>
     
-    <rect x="480" y="0" width="160" height="24" class="skill-pill" />
-    <text x="560" y="16" text-anchor="middle" class="skill-text">Cybersecurity (Learning)</text>
+    <g class="skill-group" transform="translate(490, 0)">
+      <rect x="0" y="0" width="160" height="24" class="skill-pill" />
+      <text x="80" y="16" text-anchor="middle" class="skill-text">Cybersecurity (Learning)</text>
+    </g>
   </g>
 </svg>
