@@ -97,8 +97,8 @@
   <text x="45" y="375" class="section-title">Academic Background</text>
   
   <!-- Education Timeline -->
-  <line x1="55" y1="430" x2="55" y2="505" class="timeline-line" />
-  <line x1="55" y1="430" x2="55" y2="505" class="timeline-glow" />
+  <line x1="55" y1="505" x2="55" y2="430" class="timeline-line" />
+  <line x1="55" y1="505" x2="55" y2="430" class="timeline-glow" />
   
   <g transform="translate(0, 400)" class="node-group">
     <rect x="70" y="10" width="700" height="75" class="card-bg" />
