@@ -62,6 +62,7 @@ Hybrid BS in **AI & Cybersecurity** | *Jul 2026 – Jul 2030 (Expected)* • **C
 ## 📊 GitHub Stats
 
 <div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=gourav-balyan&show_icons=true&theme=transparent&hide_border=true&title_color=58a6ff&text_color=c9d1d9" alt="Gourav's GitHub Stats" />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=gourav-balyan&layout=compact&theme=transparent&hide_border=true&title_color=58a6ff&text_color=c9d1d9" alt="Top Languages" />
+  <img src="https://streak-stats.demolab.com/?user=Gourav-Balyan&theme=transparent&hide_border=true&title_color=58a6ff&text_color=c9d1d9&ring=58a6ff&fire=58a6ff&currStreakLabel=c9d1d9" alt="GitHub Streak" />
+  <br/>
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=Gourav-Balyan&theme=transparent" alt="Top Languages" />
 </div>
